@@ -8,24 +8,19 @@ $(function () {
     // 変数の準備
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        var $container = $(this),                                 // a
-            $slideGroup = $container.find('.slideshow-slides'),   // b
-            $slides = $slideGroup.find('.slide'),                 // c
-            $nav = $container.find('.slideshow-nav'),             // d
-            $indicator = $container.find('.slideshow-indicator'), // e
-            // スライドショー内の各要素の jQuery オブジェクト
-            // a スライドショー全体のコンテナー
-            // b 全スライドのまとまり (スライドグループ)
-            // c 各スライド
-            // d ナビゲーション (Prev/Next)
-            // e インジケーター (ドット)
+        // スライドショー内の各要素の jQuery オブジェクト
+        var $container = $(this),                                 // a スライドショー全体のコンテナー
+            $slideGroup = $container.find('.slideshow-slides'),   // b 全スライドのまとまり (スライドグループ)
+            $slides = $slideGroup.find('.slide'),                 // c 各スライド
+            $nav = $container.find('.slideshow-nav'),             // d ナビゲーション (Prev/Next)
+            $indicator = $container.find('.slideshow-indicator'), // e インジケーター (ドット)
 
             slideCount = $slides.length, // スライドの点数
             indicatorHTML = '',          // インジケーターのコンテンツ
             currentIndex = 0,            // 現在のスライドのインデックス
             duration = 500,              // 次のスライドへのアニメーションの所要時間
             easing = 'easeInOutExpo',    // 次のスライドへのアニメーションのイージングの種類
-            interval = 7500,             // 自動で次のスライドに移るまでの時間
+            interval = 4000,             // 自動で次のスライドに移るまでの時間
             timer;                       // タイマーの入れ物
 
 
@@ -275,7 +270,7 @@ $(function () {
                 position: new google.maps.LatLng(markerLatLng[0], markerLatLng[1]),
                 map: map
             });
-        }        
+        }
     }
 
     initMap();
